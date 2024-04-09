@@ -5,17 +5,22 @@
     white-space: nowrap;
     gap: 0;
 }
-  
-.stars i {
+
+input {
+  visibility: hidden;
+}
+
+.stars .star {
     display: block;
     width: 100px;
     height: 100px;
-}
-  
-.stars i, .stars i:hover ~ i {
     background-image: url('/img/star-empty.svg');
 }
-  
-.stars:hover i {
+
+.stars .star:has(~ input[type=checkbox]:checked) {
+  background-image: url('/img/star.svg');
+}
+
+.stars .star:has(~ .star:hover), .star:hover {
     background-image: url('/img/star.svg');
 }
