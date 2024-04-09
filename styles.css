@@ -1,1 +1,21 @@
 /* Пиши стили тут */
+.stars {
+    display: flex;
+    height: 100px;
+    white-space: nowrap;
+    gap: 0;
+}
+  
+.stars i {
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+  
+.stars i, .stars i:hover ~ i {
+    background-image: url('/img/star-empty.svg');
+}
+  
+.stars:hover i {
+    background-image: url('/img/star.svg');
+}
